@@ -447,6 +447,7 @@ td form{margin:0}
 .tools{margin-left:auto;display:flex;align-items:center;gap:.4rem;flex:none}
 .tools select{width:auto;background:var(--card);border-color:transparent}
 .side-toggle{display:none}
+.topbar-brand{display:none}
 .scrim{display:none}
 .content{flex:1;padding:1.4rem clamp(1rem,3vw,2rem) 3rem;min-width:0}
 .content h2{font:600 1.15rem var(--font-body);margin:0 0 .9rem}
@@ -484,6 +485,8 @@ form.a-card{margin-bottom:1.1rem}
 
 @media (max-width:1000px){
   .admin{grid-template-columns:minmax(0,1fr)}
+  .topbar-brand{display:inline-flex;min-width:0}
+  .topbar-brand .logo{font-size:1.9rem}
   .topbar h1{margin-left:.2rem}
   .side{position:fixed;inset:0 auto 0 0;z-index:70;width:min(280px,86vw);transform:translateX(-102%);transition:transform .25s ease;box-shadow:none}
   .admin.side-open .side{transform:none;box-shadow:var(--shadow)}
@@ -496,6 +499,7 @@ form.a-card{margin-bottom:1.1rem}
 @media (max-width:760px){
   .topbar{flex-wrap:wrap;gap:.4rem .5rem}
   .side-toggle{order:1}
+  .topbar-brand{order:2;flex:1 1 0;min-width:0}
   .tools{order:3;gap:0}
   .topbar h1{order:4;flex:1 1 100%;font-size:1.1rem;margin:.2rem 0 0}
   .tsearch{order:5;flex:1 1 100%;max-width:none}
